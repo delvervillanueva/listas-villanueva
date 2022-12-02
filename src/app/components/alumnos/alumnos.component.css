@@ -1,0 +1,13 @@
+.strike {
+    text-decoration: line-through;
+}
+.bold {
+    font-weight: bold;
+}
+.color_red {
+    color: red;
+}
+
+.color_blue {
+    color: blue;
+}

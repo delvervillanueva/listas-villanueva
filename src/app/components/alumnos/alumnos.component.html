@@ -1,0 +1,36 @@
+<h1> Almunos </h1>
+
+<!-- <div *ngFor="let alumno of alumnos">{{alumno}} </div>
+ -->
+
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Edad</th>
+        <th></th>
+        <th>Sexo</th>
+        <th></th>
+
+        <th>Promedio</th>
+    </tr>
+    <tr *ngFor="let alumno of alumnos">
+        <td>
+            {{alumno.nombre.toUpperCase() }}
+        </td>
+        <td>
+            {{alumno.edad }}
+        </td>
+        <td></td>
+
+        <td [ngStyle]="{'color': alumno.sexo == 'Femenino' ? 'pink' : 'black'}">
+            {{alumno.sexo }}
+        </td>
+        <td></td>
+    
+        <td>
+            <span [ngClass]="alumno.promedio <= 10 ? 'badge bg-danger' : 'color_blue'">{{alumno.promedio }}</span>
+        </td> 
+        
+   
+    </tr>
+</table>
